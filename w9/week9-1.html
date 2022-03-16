@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Week 2 Files</title>
+<style type="text/css">
+	.border{border:1px solid black;}
+</style>
+</head>
+
+<body>
+</body>
+
+<script type="text/javascript">
+	//Use this Array of objects to complete the assignment.
+	var people =[
+		{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
+		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
+		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
+		{first:"Kevin", last:"McCallister", credit:"Home Alone" },
+		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
+		{first:"Buzz", last:"Lightyear", credit:"Toy Story" },
+		{first:"Marion", last:"Cobretti", credit:"Cobra" }
+	]
+	var div = []
+	document.querySelector('body').appendChild(document.createElement("div"))
+	for(let i = 0; i <= people.length-1; i++){
+
+		
+		div[i] = document.createElement("div")
+		div[i].setAttribute("id", "div"+i)
+		div[i].setAttribute("style", "border:1px solid black")
+		let p1 = document.createElement("p")
+		let p2 = document.createElement("p")
+		let p3 = document.createElement("p")
+		//document.querySelector("div").style.border = "border:1px solid black"
+		let text1 = document.createTextNode(`${people[i].first}`)
+		let text2 = document.createTextNode(`${people[i].last}`)
+		let text3 = document.createTextNode(`${people[i].credit}`)
+		//var br = document.write("<br>")
+		document.querySelector('body').appendChild(div[i])
+		document.querySelector('#div'+i).appendChild(p1)
+		document.querySelector('#div'+i).appendChild(p2)
+		document.querySelector('#div'+i).appendChild(p3)
+		p1.appendChild(text1)
+		//document.write("<br>")
+		p2.appendChild(text2)
+		//document.write("<br>")
+		p3.appendChild(text3)
+		//document.write("<br>")
+		//document.getElementById("#div"+1).style.border = "1px solid black"
+		//document.getElementById("div").style.border = "border:1px solid black"
+		
+	}
+	//document.getElementById("div").style.border = "border:1px solid black"
+</script>
+
+</html>
